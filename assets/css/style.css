@@ -73,6 +73,7 @@ h3{font-size:clamp(1.15rem,1.5vw,1.35rem);letter-spacing:-.02em}
 p{margin:0 0 1rem}
 strong{color:var(--ink);font-weight:600}
 :focus-visible{outline:3px solid var(--brand);outline-offset:3px;border-radius:6px}
+[id]{scroll-margin-top:calc(var(--header-h) + 24px)}
 ::selection{background:var(--brand);color:#fff}
 
 .container{width:100%;max-width:var(--container);margin-inline:auto;padding-inline:var(--gutter)}
@@ -214,10 +215,9 @@ strong{color:var(--ink);font-weight:600}
 .ops__foot .ops__dot{width:8px;height:8px;border-radius:50%;background:var(--brand);display:block;position:relative}
 .ops__foot .ops__dot::after{content:"";position:absolute;inset:-5px;border-radius:50%;border:1px solid rgba(242,101,34,.6);animation:ping 2.4s var(--ease) infinite}
 @keyframes ping{0%{transform:scale(.7);opacity:.9}100%{transform:scale(1.6);opacity:0}}
-.ops__chip{position:absolute;display:flex;align-items:center;gap:9px;padding:11px 16px;border-radius:14px;background:rgba(11,15,20,.85);border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 40px -20px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:.82rem;color:#e8edf3;font-family:var(--font-display)}
+.ops__chips{display:flex;flex-wrap:wrap;gap:12px;margin-top:16px;justify-content:center}
+.ops__chip{display:inline-flex;align-items:center;gap:9px;padding:11px 16px;border-radius:14px;background:rgba(11,15,20,.85);border:1px solid rgba(255,255,255,.14);box-shadow:0 20px 40px -20px rgba(0,0,0,.8);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);font-size:.82rem;color:#e8edf3;font-family:var(--font-display)}
 .ops__chip svg{width:16px;height:16px;color:var(--brand-300)}
-.ops__chip--a{right:-14px;top:22%}
-.ops__chip--b{left:-18px;bottom:14%}
 
 /* ---------- marquee ---------- */
 .marquee{border-block:1px solid var(--line);background:var(--bg);padding:30px 0;overflow:hidden}
@@ -396,8 +396,6 @@ strong{color:var(--ink);font-weight:600}
 /* ---------- responsive ---------- */
 @media (max-width:1000px){
   .hero__inner{grid-template-columns:1fr}
-  .ops__chip--a{right:8px}
-  .ops__chip--b{left:8px}
   .footer__grid{grid-template-columns:1fr 1fr}
   .footer__brand{grid-column:1/-1}
 }
