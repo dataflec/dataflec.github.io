@@ -293,6 +293,21 @@ strong{color:var(--ink)}
 .info__item span,.info__item a{font-size:.92rem;color:var(--body)}
 .info__item a:hover{color:var(--brand-dark)}
 
+/* ---------- faq ---------- */
+.faq{display:grid;gap:12px;max-width:840px;margin-inline:auto}
+.faq__item{border:1px solid var(--line);border-radius:var(--radius);background:var(--bg);padding:2px 22px;box-shadow:var(--shadow-xs)}
+.faq__item summary{cursor:pointer;font-weight:600;color:var(--ink);padding:18px 0;list-style:none;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq__item summary::-webkit-details-marker{display:none}
+.faq__item summary::after{content:"+";font-size:1.4rem;color:var(--brand);line-height:1}
+.faq__item[open] summary::after{content:"\2013"}
+.faq__body{padding-bottom:18px;color:var(--body);font-size:.95rem}
+.faq__body p:last-child{margin-bottom:0}
+
+/* ---------- numbered steps list ---------- */
+.steps-list{margin:0;padding:0;list-style:none;display:grid;gap:12px}
+.steps-list li{display:flex;gap:12px;align-items:flex-start;font-size:.93rem}
+.steps-list li span{flex:none;width:26px;height:26px;border-radius:50%;background:var(--brand-light);color:var(--brand-darker);display:grid;place-items:center;font-size:.8rem;font-weight:700}
+
 /* ---------- footer ---------- */
 .site-footer{background:#170d08;color:#c9b6ab;padding:clamp(48px,6vw,76px) 0 0;margin-top:0}
 .site-footer a{color:#e8d5c9}
